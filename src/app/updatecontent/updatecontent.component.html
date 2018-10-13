@@ -18,9 +18,11 @@
             </section>
             <section>
                 <h2>Communications</h2>
-                <mat-checkbox *ngFor="let comm of communications" [value]="comm.value">
-                    {{comm.viewValue}}
-                </mat-checkbox>
+                <mat-button-toggle-group #group="contentTags">
+                    <mat-button-toggle *ngFor="let comm of communications" [value]="comm.value">
+                        {{comm.viewValue}}
+                    </mat-button-toggle>>
+                </mat-button-toggle-group>
             </section>
             <section>
                 <h2>Curriculum</h2>
