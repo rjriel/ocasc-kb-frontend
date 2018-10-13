@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatecontentComponent implements OnInit {
 
-  constructor() { }
+  types = [
+    {value: 'type-0', viewValue: 'How To'},
+    {value: 'type-1', viewValue: 'Minutes'},
+  ];
+  constructor() { 
+    }
 
   ngOnInit() {
   }
-
 }
+
+  
