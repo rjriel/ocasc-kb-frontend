@@ -18,10 +18,10 @@
             </section>
             <section>
                 <h2>Communications</h2>
-                <mat-button-toggle-group #group="contentTags">
+                <mat-button-toggle-group multiple>
                     <mat-button-toggle *ngFor="let comm of communications" [value]="comm.value">
                         {{comm.viewValue}}
-                    </mat-button-toggle>>
+                    </mat-button-toggle>
                 </mat-button-toggle-group>
             </section>
             <section>

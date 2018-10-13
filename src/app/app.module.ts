@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
       MatSelectModule,
-      MatCheckboxModule
+      MatCheckboxModule,
+      MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -14,11 +14,10 @@ export class UpdatecontentComponent implements OnInit {
     {value: 'type-3', viewValue: 'Advisory support'},
   ];
   communications = [
-    {value: 'comm-0',  viewValue: 'electronic'},
-    {value: 'comm-1',  viewValue: 'in person'},
-    {value: 'comm-2',  viewValue: 'with teachers'},
-    {value: 'comm-3',  viewValue: 'with administration'},
-
+    'electronic',
+    'in person',
+    'teachers',
+    'with administration',
   ];
   curriculum = [
       {value: 'curr-0',  viewValue: 'preschool'},
