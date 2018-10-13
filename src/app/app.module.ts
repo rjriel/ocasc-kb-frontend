@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatecontentComponent } from './updatecontent/updatecontent.component';
 import { AppRoutingModule } from './app-routing.module';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 
@@ -29,13 +31,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-<<<<<<< HEAD
     AppRoutingModule,
-    HttpClientModule
-=======
-      AppRoutingModule,
-      MatSelectModule
->>>>>>> 2e1129393b1f961bc0f8ac5d63c2f6e2fac63de8
+    HttpClientModule,
+      MatSelectModule,
+      MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],
