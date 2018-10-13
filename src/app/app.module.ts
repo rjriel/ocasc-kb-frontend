@@ -10,12 +10,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatecontentComponent } from './updatecontent/updatecontent.component';
 import { AppRoutingModule } from './app-routing.module';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UpdatecontentComponent
+      UpdatecontentComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +26,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    AppRoutingModule
+      AppRoutingModule,
+      MatSelectModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

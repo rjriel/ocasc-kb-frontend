@@ -1,4 +1,24 @@
-<h1>{{title}}</h1>
-<div>
-Updatecontent
-</div>
+<mat-card>
+    <section class="mat-typography">
+        <h1>Update Content</h1>
+        <form>
+            <div>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Title">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-select placeholder="Type of Content">
+                        <mat-option *ngFor="let type of types" [value]="type.value">
+                            {{type.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                
+            </div>
+        </form>
+    </section>
+</mat-card>
