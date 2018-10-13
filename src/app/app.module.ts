@@ -9,13 +9,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdatecontentComponent } from './updatecontent/updatecontent.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    UpdatecontentComponent
   ],
   imports: [
     BrowserModule,
@@ -26,10 +29,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+<<<<<<< HEAD
     AppRoutingModule,
     HttpClientModule
+=======
+      AppRoutingModule,
+      MatSelectModule
+>>>>>>> 2e1129393b1f961bc0f8ac5d63c2f6e2fac63de8
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
