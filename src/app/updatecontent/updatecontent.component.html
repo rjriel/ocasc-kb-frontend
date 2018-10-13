@@ -2,12 +2,12 @@
     <section class="mat-typography">
         <h1>Update Content</h1>
         <form>
-            <div>
+            <section>
                 <mat-form-field>
                     <input matInput type="text" placeholder="Title">
                 </mat-form-field>
-            </div>
-            <div>
+            </section>
+            <section>
                 <mat-form-field>
                     <mat-select placeholder="Type of Content">
                         <mat-option *ngFor="let type of types" [value]="type.value">
@@ -15,10 +15,71 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-            </div>
-            <div>
-                
-            </div>
+            </section>
+            <section>
+                <h2>Communications</h2>
+                <mat-checkbox *ngFor="let comm of communications" [value]="comm.value">
+                    {{comm.viewValue}}
+                </mat-checkbox>
+            </section>
+            <section>
+                <h2>Curriculum</h2>
+                <mat-checkbox *ngFor="let curr of curriculum" [value]="curr.value">
+                    {{curr.viewValue}}
+                </mat-checkbox>
+            </section>
+            <section>
+                <h2>Financial</h2>
+                <mat-checkbox *ngFor="let fin of financial" [value]="fin.value">
+                    {{fin.viewValue}}
+                </mat-checkbox>
+            </section>
+            <section>
+                <h2>Location</h2>
+                <mat-checkbox *ngFor="let loc of location" [value]="loc.value">
+                    {{loc.viewValue}}
+                </mat-checkbox>
+            </section>
+            <section>
+                <h2>Population</h2>
+                <mat-checkbox *ngFor="let pop of population" [value]="pop.value">
+                    {{pop.viewValue}}
+                </mat-checkbox>
+            </section>
+            <section>
+                <h2>Requirements</h2>
+                <mat-checkbox *ngFor="let req of communications" [value]="req.value">
+                    {{req.viewValue}}
+                </mat-checkbox>
+            </section>
+            <section>
+                <h2>Times</h2>
+                <mat-checkbox *ngFor="let tim of times" [value]="tim.value">
+                    {{tim.viewValue}}
+                </mat-checkbox>
+            </section>
+            <section>
+                <h2>Short Description</h2>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Short Description">
+                </mat-form-field>
+            </section>
+            <section>
+                <h2>Long Description</h2>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Long Description">
+                </mat-form-field>
+            </section>
+            <section>
+                <h2>File Upload</h2>
+            </section>
+            <section>
+                <h2>Creation Details</h2>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Title">
+                </mat-form-field>
+            </section>
+
         </form>
     </section>
 </mat-card>

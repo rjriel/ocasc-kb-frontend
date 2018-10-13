@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatecontentComponent } from './updatecontent/updatecontent.component';
 import { AppRoutingModule } from './app-routing.module';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
       AppRoutingModule,
-      MatSelectModule
+      MatSelectModule,
+      MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],
