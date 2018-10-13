@@ -1,7 +1,7 @@
 <mat-card>
   <section class="mat-typography">
     <h1>Login</h1>
-    <form (ngSubmit)="login()">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
       <div>
         <mat-form-field>
           <input matInput type="text" placeholder="Username" formControlName="username" required>
