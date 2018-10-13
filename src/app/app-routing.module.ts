@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { UpdatecontentComponent }      from './updatecontent/updatecontent.component';
+import { LoginComponent }      from './login/login.component';
+
+const routes: Routes = [
+    { path: '', redirectTo: 'updatecontent', pathMatch: 'full' },
+  { path: 'updatecontent', component: UpdatecontentComponent },
+  { path: 'login', component: LoginComponent }
+];
 
 @NgModule({
-    imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
 
 
-import { updatecontent }      from './updatecontent';
 
-const routes: Routes = [
-  { path: 'updatecontent', component: updatecontent }
-];
