@@ -4,4 +4,5 @@ export interface EntryBrief {
     shortDescription: string;
     keywords: string[];
     icon?: string;
+    approved: boolean;
 }

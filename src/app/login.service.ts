@@ -15,8 +15,7 @@ export class LoginService {
     return this.http.post(API_LOGIN, JSON.stringify(formGroup.value), {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
-      }),
-
+      })
     });
   }
 }
