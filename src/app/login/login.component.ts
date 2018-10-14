@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -13,13 +15,26 @@ export class LoginComponent implements OnInit {
     'password': ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder, private loginService: LoginService) { }
+  message: string;
+
+  constructor(
+    private fb: FormBuilder,
+    private loginService: LoginService,
+    private router: Router,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
   login(): void {
-    this.loginService.login(this.loginForm.value);
+    this.loginService
+      .login(this.loginForm.value)
+      .subscribe(
+        () => this.router.navigate(['/entries']),
+        err => this.snackBar.open(err['message'], '', {
+          duration: 500
+        })
+      );
   }
 
 }
