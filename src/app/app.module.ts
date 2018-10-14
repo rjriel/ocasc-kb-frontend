@@ -16,13 +16,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { EntryBriefComponent } from './entry-brief/entry-brief.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UpdatecontentComponent
+    UpdatecontentComponent,
+    EntryBriefComponent
   ],
   imports: [
     BrowserModule,
