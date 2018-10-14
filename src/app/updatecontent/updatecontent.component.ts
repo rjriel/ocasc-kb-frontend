@@ -19,11 +19,9 @@ export class UpdatecontentComponent implements OnInit {
     'teachers',
     'with administration',
   ];
-  curriculum = [
-      {value: 'curr-0',  viewValue: 'preschool'},
-      {value: 'curr-1',  viewValue: 'elementary'},
-      {value: 'curr-2',  viewValue: 'secondary'},
-      {value: 'curr-3',  viewValue: 'language'},
+  schools = [
+      {value: 'school-0',  viewValue: 'A Secondary School'},
+      {value: 'school-1',  viewValue: 'B Elementary'},
 
   ];
   financial = [

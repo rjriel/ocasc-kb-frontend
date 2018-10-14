@@ -1,0 +1,21 @@
+.mat-card {
+    max-width: 480px;
+}
+.formtitle > * {
+  font-size: 200%;
+  font-weight: bold;
+}
+.smalltextarea { 
+  height: 100px;
+}
+.largetextarea { 
+  height: 300px;
+  }
+textarea {
+    width: 100%;
+}
+mat-form-field {
+    width: 100%;
+}
+
+
