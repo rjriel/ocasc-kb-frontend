@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { EntryBriefComponent } from './entry-brief/entry-brief.component';
 import { EntriesComponent } from './entries/entries.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { EntriesComponent } from './entries/entries.component';
     HttpClientModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatButtonToggleModule
+      MatButtonToggleModule,
+      MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
