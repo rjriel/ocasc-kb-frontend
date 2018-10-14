@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { API_PICKLIST } from 'src/config/url';
 
-import { Injectable } from '@angular/core';
-
 @Injectable({
   providedIn: 'root'
 })

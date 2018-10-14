@@ -1,12 +1,12 @@
 <mat-card>
     <section class="mat-typography">
         <h1>ADD/EDIT RECORD</h1>
-        <form (ngSubmit)="updatecontent()">
+        <form [formGroup]="updateContentForm" (ngSubmit)="submit()">
             <section class="formtitle">
                 <mat-form-field>
                     <mat-select placeholder="Type of Content">
-                        <mat-option *ngFor="let type of types" [value]="type.value">
-                            {{type.viewValue}}
+                        <mat-option *ngFor="let type of types" [value]="type">
+                            {{type}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -24,18 +24,20 @@
                     </mat-button-toggle>
                 </mat-button-toggle-group>
             </section>
-            <br/>
+            <br />
             <section>
                 <h2>Short Description</h2>
                 <mat-form-field>
-                    <textarea matInput class="smalltextarea" placeholder="Short Description" formControlName="short_desc" required></textarea>
+                    <textarea matInput class="smalltextarea" placeholder="Short Description" formControlName="short_desc"
+                        required></textarea>
                 </mat-form-field>
             </section>
-            <br/>
+            <br />
             <section>
                 <h2>Long Description</h2>
                 <mat-form-field>
-                    <textarea matInput class="largetextarea" placeholder="Long Description" formControlName="long_desc" required></textarea>
+                    <textarea matInput class="largetextarea" placeholder="Long Description" formControlName="long_desc"
+                        required></textarea>
                 </mat-form-field>
             </section>
             <section>
@@ -47,23 +49,25 @@
                     <input matInput type="text" placeholder="Author" formControlName="author" required>
                 </mat-form-field>
                 <br />
-                <mat-form-field>
+                <!-- <mat-form-field>
                     <mat-select placeholder="School">
                         <mat-option *ngFor="let school of schools" [value]="school.value">
                             {{school.viewValue}}
                         </mat-option>
                     </mat-select>
+                </mat-form-field> -->
+                <br />
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Today's Date (autofill)" formControlName="date_today"
+                        required>
                 </mat-form-field>
                 <br />
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Today's Date (autofill)" formControlName="date_today" required>
-                </mat-form-field>
-                <br />
-                <mat-form-field>
-                    <input matInput type="text" placeholder="Date Modified (autofill)" formControlName="date_modified" required>
+                    <input matInput type="text" placeholder="Date Modified (autofill)" formControlName="date_modified"
+                        required>
                 </mat-form-field>
             </section>
-            
+
         </form>
     </section>
 </mat-card>
