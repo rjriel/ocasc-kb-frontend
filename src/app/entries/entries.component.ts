@@ -1,3 +1,4 @@
+import { EntryService } from './../entry.service';
 import { EntryBrief } from './../model/entry-brief';
 import { Component, OnInit } from '@angular/core';
 
@@ -19,9 +20,16 @@ export class EntriesComponent implements OnInit {
   displayedEntryBriefs: EntryBrief[];
   entrySearchValue: string;
 
-  constructor() { }
+  constructor(private entryService: EntryService) { }
 
   ngOnInit() {
+    this.entryService.fetchEntries().subscribe(
+      entries => {
+        const approved = entries.filter(entry => entry.approved);
+        this.entryBriefs = approved;
+        this.displayedEntryBriefs = approved;
+      }
+    );
   }
 
   filterEntryBriefs(): void {
