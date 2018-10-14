@@ -1,6 +1,10 @@
 <mat-card>
   <section class="mat-typography">
     <h4>{{entry.title}}</h4>
-    <img src="{{entry.icon}}" />
+    <div class="container">
+      <img src="{{entry.icon}}" />
+      <p>{{entry.shortDescription}}</p>
+      <p>{{entry.keywords}}</p>
+    </div>
   </section>
 </mat-card>
