@@ -16,14 +16,15 @@
                     <input matInput type="text" placeholder="Title of Content" formControlName="content_title" required>
                 </mat-form-field>
             </section>
-            <section>
-                <h2></h2>
-                <mat-button-toggle-group multiple>
-                    <mat-button-toggle *ngFor="let kw of keywords" [value]="kw">
-                        {{kw}}
-                    </mat-button-toggle>
-                </mat-button-toggle-group>
-            </section>
+           <section>
+           
+                <mat-chip-list>
+                    <mat-chip *ngFor="let kw of keywords" [ngStyle]="{'background-color': kw.color}"[selectable]="selectable" (click)="switch(kw)">
+                        {{kw.name}}
+                    </mat-chip>
+
+                </mat-chip-list>
+           </section>
             <br />
             <section>
                 <h2>Short Description</h2>
@@ -67,6 +68,7 @@
                         required>
                 </mat-form-field>
             </section>
+            <button mat-raised-button type="submit">Update Record</button>
 
         </form>
     </section>

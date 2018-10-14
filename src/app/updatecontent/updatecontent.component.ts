@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, Validators } from '@angular/forms';
 import { UpdatecontentService } from '../updatecontent.service';
+
+export interface Keywords {
+    name: string;
+    color: string;
+}
 
 @Component({
     selector: 'app-updatecontent',
@@ -16,6 +21,7 @@ export class UpdatecontentComponent implements OnInit {
         'date_today': ['', Validators.required],
         'date_modified': ['', Validators.required],
         'selected_type': ['', Validators.required],
+        'active_keywords': [[]],
 
     });
     schools = [
@@ -23,11 +29,11 @@ export class UpdatecontentComponent implements OnInit {
         { value: 'school-1', viewValue: 'B Elementary' },
     ];
 
-    keywords = [
-        'electronic',
-        'in person',
-        'teachers',
-        'with administration',
+    keywords: Keywords[] = [
+        { name: 'electronic', color: 'grey'},
+        { name: 'in person', color: 'grey'},
+        { name: 'teachers',color: 'grey'},
+        { name: 'with administration',color: 'grey'},
     ];
     types = [
         { value: 'type-0', viewValue: 'Plan an Event' },
@@ -35,6 +41,29 @@ export class UpdatecontentComponent implements OnInit {
         { value: 'type-2', viewValue: 'Add school infrastructure' },
         { value: 'type-3', viewValue: 'Advisory support' },
     ];
+
+    switch(kw: Keywords): void {
+        const active_keywords = this.updateContentForm.get('active_keywords').value as string[];
+
+        if (kw.color == 'red') {
+            kw.color = 'grey';
+        } else {
+            kw.color = 'red';
+        }
+        let index = active_keywords.findIndex( value =>
+            value === kw.name
+        );
+
+        if (index >= 0) {
+            active_keywords.splice(index, 1);
+        } else {
+                // Add our keyword
+            if (kw.name) {
+                active_keywords.push(kw.name);
+            }
+        }
+
+    }
 
     constructor(private fb: FormBuilder, private updateContentService: UpdatecontentService) { }
 
