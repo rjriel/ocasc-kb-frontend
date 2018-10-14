@@ -1,3 +1,4 @@
+import { DetailsComponent } from './details/details.component';
 import { MyEntriesComponent } from './my-entries/my-entries.component';
 import { EntriesComponent } from './entries/entries.component';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'updatecontent', component: UpdatecontentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'entries', component: EntriesComponent },
-  { path: 'myentries', component: MyEntriesComponent }
+  { path: 'myentries', component: MyEntriesComponent },
+  { path: 'details/:id', component: DetailsComponent }
 ];
 
 @NgModule({

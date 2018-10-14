@@ -21,6 +21,7 @@ import { EntryBriefComponent } from './entry-brief/entry-brief.component';
 import { EntriesComponent } from './entries/entries.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MyEntriesComponent } from './my-entries/my-entries.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MyEntriesComponent } from './my-entries/my-entries.component';
     UpdatecontentComponent,
     EntryBriefComponent,
     EntriesComponent,
-    MyEntriesComponent
+    MyEntriesComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

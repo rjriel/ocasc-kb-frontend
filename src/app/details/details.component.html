@@ -1,0 +1,18 @@
+<mat-card>
+  <section class="mat-typography">
+    <h1>{{details.title}}</h1>
+    <section>
+      <b>{{details.approved ? 'Approved': 'Unapproved'}}</b>
+      <div>
+        <b>Short Description: </b>
+        <p>{{details.shortDesc}}</p>
+        <b>Long Description: </b>
+        <p>{{details.longDesc}}</p>
+        <b>Created: </b>
+        <p>{{details.created}}</p>
+        <b>Modified: </b>
+        <p>{{details.modified}}</p>
+      </div>
+    </section>
+  </section>
+</mat-card>

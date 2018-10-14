@@ -14,5 +14,4 @@ export class EntryBriefComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

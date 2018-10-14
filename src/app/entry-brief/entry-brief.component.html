@@ -1,6 +1,8 @@
 <mat-card>
   <section class="mat-typography">
-    <h4>{{entry.title}}</h4>
+    <a href="/details/{{entry.id}}">
+      <h4>{{entry.title}}</h4>
+    </a>
     <div class="container">
       <img src="{{entry.icon}}" />
       <p>{{entry.shortDescription}}</p>
