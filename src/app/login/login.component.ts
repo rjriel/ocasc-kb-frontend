@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     this.loginService
-      .login(this.loginForm.value)
+      .login(this.loginForm)
       .subscribe(
         () => this.router.navigate(['/entries']),
         err => this.snackBar.open(err['message'], '', {
