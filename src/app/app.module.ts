@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatecontentComponent } from './updatecontent/updatecontent.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSnackBarModule,
     AppRoutingModule,
     HttpClientModule,
       MatSelectModule,
