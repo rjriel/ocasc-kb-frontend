@@ -15,13 +15,24 @@ export class UpdatecontentComponent implements OnInit {
         'author': ['', Validators.required],
         'date_today': ['', Validators.required],
         'date_modified': ['', Validators.required],
-    });
 
-    types = [
+    });
+    schools = [
+        { value: 'school-0', viewValue: 'A Secondary School' },
+        { value: 'school-1', viewValue: 'B Elementary' },
+    ];
+
+    keywords = [
         'electronic',
         'in person',
         'teachers',
         'with administration',
+    ];
+    types = [
+        { value: 'type-0', viewValue: 'Plan an Event' },
+        { value: 'type-1', viewValue: 'Run the school council' },
+        { value: 'type-2', viewValue: 'Add school infrastructure' },
+        { value: 'type-3', viewValue: 'Advisory support' },
     ];
 
     constructor(private fb: FormBuilder, private updateContentService: UpdatecontentService) { }

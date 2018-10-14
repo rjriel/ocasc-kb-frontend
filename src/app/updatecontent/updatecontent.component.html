@@ -19,8 +19,8 @@
             <section>
                 <h2></h2>
                 <mat-button-toggle-group multiple>
-                    <mat-button-toggle *ngFor="let type of types" [value]="type">
-                        {{type}}
+                    <mat-button-toggle *ngFor="let kw of keywords" [value]="kw">
+                        {{kw}}
                     </mat-button-toggle>
                 </mat-button-toggle-group>
             </section>
@@ -49,13 +49,13 @@
                     <input matInput type="text" placeholder="Author" formControlName="author" required>
                 </mat-form-field>
                 <br />
-                <!-- <mat-form-field>
+                <mat-form-field>
                     <mat-select placeholder="School">
                         <mat-option *ngFor="let school of schools" [value]="school.value">
                             {{school.viewValue}}
                         </mat-option>
                     </mat-select>
-                </mat-form-field> -->
+                </mat-form-field>
                 <br />
                 <mat-form-field>
                     <input matInput type="text" placeholder="Today's Date (autofill)" formControlName="date_today"
