@@ -15,6 +15,7 @@ export class UpdatecontentComponent implements OnInit {
         'author': ['', Validators.required],
         'date_today': ['', Validators.required],
         'date_modified': ['', Validators.required],
+        'selected_type': ['', Validators.required],
 
     });
     schools = [

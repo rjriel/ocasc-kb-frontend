@@ -4,7 +4,7 @@
         <form [formGroup]="updateContentForm" (ngSubmit)="submit()">
             <section class="formtitle">
                 <mat-form-field>
-                    <mat-select placeholder="Type of Content">
+                    <mat-select placeholder="Type of Content" formControlName="selected_type" name="selected_type" required>
                         <mat-option *ngFor="let type of types" [value]="type.value">
                             {{type.viewValue}}
                         </mat-option>
