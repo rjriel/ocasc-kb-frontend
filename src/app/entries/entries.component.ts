@@ -16,8 +16,8 @@ export class EntriesComponent implements OnInit {
     'Add school infrastructure'
   ];
 
-  private entryBriefs: EntryBrief[];
-  displayedEntryBriefs: EntryBrief[];
+  private entryBriefs: EntryBrief[] = [];
+  displayedEntryBriefs: EntryBrief[] = [];
   entrySearchValue: string;
 
   constructor(private entryService: EntryService) { }
