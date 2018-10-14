@@ -8,15 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatecontentComponent } from './updatecontent/updatecontent.component';
 import { AppRoutingModule } from './app-routing.module';
-import {MatSelectModule} from '@angular/material/select';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { EntryBriefComponent } from './entry-brief/entry-brief.component';
+import { EntriesComponent } from './entries/entries.component';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { EntryBriefComponent } from './entry-brief/entry-brief.component';
     AppComponent,
     LoginComponent,
     UpdatecontentComponent,
-    EntryBriefComponent
+    EntryBriefComponent,
+    EntriesComponent
   ],
   imports: [
     BrowserModule,
@@ -35,12 +38,13 @@ import { EntryBriefComponent } from './entry-brief/entry-brief.component';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSidenavModule,
     MatSnackBarModule,
     AppRoutingModule,
     HttpClientModule,
-      MatSelectModule,
-      MatCheckboxModule,
-      MatButtonToggleModule
+    MatSelectModule,
+    MatCheckboxModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],
