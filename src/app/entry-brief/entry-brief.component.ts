@@ -1,5 +1,5 @@
 import { EntryBrief } from './../model/entry-brief';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-entry-brief',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntryBriefComponent implements OnInit {
 
-  entry: EntryBrief;
+  @Input() entry: EntryBrief;
 
   constructor() { }
 
