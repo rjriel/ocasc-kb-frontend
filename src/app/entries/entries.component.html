@@ -6,7 +6,7 @@
   </mat-drawer>
   <mat-drawer-content>
     <mat-form-field>
-      <input matInput [(ngModel)]="entrySearchValue" (keyup)="filterEntryBriefs()" placeholder="Filter">
+      <input matInput [(ngModel)]="entrySearchValue" (keyup)="filterEntryBriefs()" placeholder="Search">
     </mat-form-field>
     <app-entry-brief *ngFor="let entry of displayedEntryBriefs"></app-entry-brief>
   </mat-drawer-content>
