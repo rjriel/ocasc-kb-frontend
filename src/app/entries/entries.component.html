@@ -1,0 +1,13 @@
+<h1 class="headline">OCASC Knowledge Library</h1>
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    <h3 class="subheading-2">Type</h3>
+    <p class="body-1" *ngFor="let type of types">{{type}}</p>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-form-field>
+      <input matInput [(ngModel)]="entrySearchValue" (keyup)="filterEntryBriefs()" placeholder="Filter">
+    </mat-form-field>
+    <app-entry-brief *ngFor="let entry of displayedEntryBriefs"></app-entry-brief>
+  </mat-drawer-content>
+</mat-drawer-container>
