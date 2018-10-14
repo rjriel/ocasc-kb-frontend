@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { EntryBriefComponent } from './entry-brief/entry-brief.component';
 import { EntriesComponent } from './entries/entries.component';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
+import { MyEntriesComponent } from './my-entries/my-entries.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {MatChipsModule} from '@angular/material/chips';
     LoginComponent,
     UpdatecontentComponent,
     EntryBriefComponent,
-    EntriesComponent
+    EntriesComponent,
+    MyEntriesComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +47,8 @@ import {MatChipsModule} from '@angular/material/chips';
     HttpClientModule,
     MatSelectModule,
     MatCheckboxModule,
-      MatButtonToggleModule,
-      MatChipsModule
+    MatButtonToggleModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

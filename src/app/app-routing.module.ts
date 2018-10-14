@@ -1,3 +1,4 @@
+import { MyEntriesComponent } from './my-entries/my-entries.component';
 import { EntriesComponent } from './entries/entries.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,7 +9,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'updatecontent', component: UpdatecontentComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'entries', component: EntriesComponent }
+  { path: 'entries', component: EntriesComponent },
+  { path: 'myentries', component: MyEntriesComponent }
 ];
 
 @NgModule({

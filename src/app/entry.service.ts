@@ -1,4 +1,4 @@
-import { API_KNOWLEDGE } from './../config/url';
+import { API_KNOWLEDGE, API_MY_KNOWLEDGE } from './../config/url';
 import { EntryBrief } from './model/entry-brief';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -13,5 +13,9 @@ export class EntryService {
 
   fetchEntries(): Observable<EntryBrief[]> {
     return this.http.get<EntryBrief[]>(API_KNOWLEDGE);
+  }
+
+  fetchMyEntries(): Observable<EntryBrief[]> {
+    return this.http.get<EntryBrief[]>(API_MY_KNOWLEDGE);
   }
 }
