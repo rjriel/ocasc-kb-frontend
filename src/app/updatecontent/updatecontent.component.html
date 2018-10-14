@@ -1,10 +1,10 @@
 <mat-card>
     <section class="mat-typography">
         <h1>ADD/EDIT RECORD</h1>
-        <form>
+        <form [formGroup]="updateContentForm" (ngSubmit)="submit()">
             <section class="formtitle">
                 <mat-form-field>
-                    <mat-select placeholder="Type of Content">
+                    <mat-select placeholder="Type of Content" formControlName="selected_type" name="selected_type" required>
                         <mat-option *ngFor="let type of types" [value]="type.value">
                             {{type.viewValue}}
                         </mat-option>
@@ -13,29 +13,31 @@
             </section>
             <section class="formtitle">
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Title of Content">
+                    <input matInput type="text" placeholder="Title of Content" formControlName="content_title" required>
                 </mat-form-field>
             </section>
             <section>
                 <h2></h2>
                 <mat-button-toggle-group multiple>
-                    <mat-button-toggle *ngFor="let comm of communications" [value]="comm">
-                        {{comm}}
+                    <mat-button-toggle *ngFor="let kw of keywords" [value]="kw">
+                        {{kw}}
                     </mat-button-toggle>
                 </mat-button-toggle-group>
             </section>
-            <br/>
+            <br />
             <section>
                 <h2>Short Description</h2>
                 <mat-form-field>
-                    <textarea matInput class="smalltextarea" placeholder="Short Description"></textarea>
+                    <textarea matInput class="smalltextarea" placeholder="Short Description" formControlName="short_desc"
+                        required></textarea>
                 </mat-form-field>
             </section>
-            <br/>
+            <br />
             <section>
                 <h2>Long Description</h2>
                 <mat-form-field>
-                    <textarea matInput class="largetextarea" placeholder="Long Description"></textarea>
+                    <textarea matInput class="largetextarea" placeholder="Long Description" formControlName="long_desc"
+                        required></textarea>
                 </mat-form-field>
             </section>
             <section>
@@ -44,7 +46,7 @@
             <section>
                 <h2>Creation Details</h2>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Title">
+                    <input matInput type="text" placeholder="Author" formControlName="author" required>
                 </mat-form-field>
                 <br />
                 <mat-form-field>
@@ -56,14 +58,16 @@
                 </mat-form-field>
                 <br />
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Today's Date (autofill)">
+                    <input matInput type="text" placeholder="Today's Date (autofill)" formControlName="date_today"
+                        required>
                 </mat-form-field>
                 <br />
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Date Modified (autofill)">
+                    <input matInput type="text" placeholder="Date Modified (autofill)" formControlName="date_modified"
+                        required>
                 </mat-form-field>
             </section>
-            
+
         </form>
     </section>
 </mat-card>
