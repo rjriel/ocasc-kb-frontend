@@ -1,4 +1,4 @@
-export const API_ROOT = 'http://api.ocasc.ca/';
+export const API_ROOT = 'https://api.ocasc.ca/';
 export const API_LOGIN = `${API_ROOT}login`;
 export const API_LOGOUT = `${API_ROOT}logout`;
 export const API_KNOWLEDGE = `${API_ROOT}knowledge`;
