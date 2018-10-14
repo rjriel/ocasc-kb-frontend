@@ -1,13 +1,8 @@
 <mat-card>
     <section class="mat-typography">
-        <h1>Update Content</h1>
+        <h1>ADD/EDIT RECORD</h1>
         <form>
-            <section>
-                <mat-form-field>
-                    <input matInput type="text" placeholder="Title">
-                </mat-form-field>
-            </section>
-            <section>
+            <section class="formtitle">
                 <mat-form-field>
                     <mat-select placeholder="Type of Content">
                         <mat-option *ngFor="let type of types" [value]="type.value">
@@ -16,60 +11,31 @@
                     </mat-select>
                 </mat-form-field>
             </section>
-            <section>
-                <h2>Communications</h2>
-                <mat-button-toggle-group multiple>
-                    <mat-button-toggle *ngFor="let comm of communications" [value]="comm.value">
-                        {{comm.viewValue}}
-                    </mat-button-toggle>
-                </mat-button-toggle-group>
-            </section>
-            <section>
-                <h2>Curriculum</h2>
-                <mat-checkbox *ngFor="let curr of curriculum" [value]="curr.value">
-                    {{curr.viewValue}}
-                </mat-checkbox>
-            </section>
-            <section>
-                <h2>Financial</h2>
-                <mat-checkbox *ngFor="let fin of financial" [value]="fin.value">
-                    {{fin.viewValue}}
-                </mat-checkbox>
-            </section>
-            <section>
-                <h2>Location</h2>
-                <mat-checkbox *ngFor="let loc of location" [value]="loc.value">
-                    {{loc.viewValue}}
-                </mat-checkbox>
-            </section>
-            <section>
-                <h2>Population</h2>
-                <mat-checkbox *ngFor="let pop of population" [value]="pop.value">
-                    {{pop.viewValue}}
-                </mat-checkbox>
-            </section>
-            <section>
-                <h2>Requirements</h2>
-                <mat-checkbox *ngFor="let req of communications" [value]="req.value">
-                    {{req.viewValue}}
-                </mat-checkbox>
-            </section>
-            <section>
-                <h2>Times</h2>
-                <mat-checkbox *ngFor="let tim of times" [value]="tim.value">
-                    {{tim.viewValue}}
-                </mat-checkbox>
-            </section>
-            <section>
-                <h2>Short Description</h2>
+            <section class="formtitle">
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Short Description">
+                    <input matInput type="text" placeholder="Title of Content">
                 </mat-form-field>
             </section>
             <section>
+                <h2></h2>
+                <mat-button-toggle-group multiple>
+                    <mat-button-toggle *ngFor="let comm of communications" [value]="comm">
+                        {{comm}}
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+            </section>
+            <br/>
+            <section>
+                <h2>Short Description</h2>
+                <mat-form-field>
+                    <textarea matInput class="smalltextarea" placeholder="Short Description"></textarea>
+                </mat-form-field>
+            </section>
+            <br/>
+            <section>
                 <h2>Long Description</h2>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Long Description">
+                    <textarea matInput class="largetextarea" placeholder="Long Description"></textarea>
                 </mat-form-field>
             </section>
             <section>
@@ -80,8 +46,24 @@
                 <mat-form-field>
                     <input matInput type="text" placeholder="Title">
                 </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <mat-select placeholder="School">
+                        <mat-option *ngFor="let school of schools" [value]="school.value">
+                            {{school.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Today's Date (autofill)">
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Date Modified (autofill)">
+                </mat-form-field>
             </section>
-
+            
         </form>
     </section>
 </mat-card>
