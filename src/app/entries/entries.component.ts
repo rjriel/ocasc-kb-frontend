@@ -35,9 +35,9 @@ export class EntriesComponent implements OnInit {
   filterEntryBriefs(): void {
     this.displayedEntryBriefs = this.entryBriefs.filter(
       entry =>
-        entry.title.includes(this.entrySearchValue) ||
-        entry.shortDescription.includes(this.entrySearchValue) ||
-        entry.keywords.join().includes(this.entrySearchValue)
+        (entry.title ? entry.title.includes(this.entrySearchValue) : false) ||
+        (entry.shortDescription ? entry.shortDescription.includes(this.entrySearchValue) : false) ||
+        (entry.keywords ? entry.keywords.join().includes(this.entrySearchValue) : false)
     );
   }
 }
