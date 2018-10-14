@@ -5,8 +5,8 @@
             <section class="formtitle">
                 <mat-form-field>
                     <mat-select placeholder="Type of Content">
-                        <mat-option *ngFor="let type of types" [value]="type">
-                            {{type}}
+                        <mat-option *ngFor="let type of types" [value]="type.value">
+                            {{type.viewValue}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
